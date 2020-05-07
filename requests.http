@@ -1,32 +1,32 @@
 ### Create user
-POST {{registrationUrl}}/registration
+POST localhost:8083/registration
 Content-Type: application/json
 
 {"name": "Sally"}
 
 ### Get user
-GET {{registrationUrl}}/users/USER-ID
+GET localhost:8083/users/4
 
 ### Get account
-GET {{registrationUrl}}/accounts?ownerId=USER-ID
+GET localhost:8083/accounts?ownerId=4
 
 ### Create project
-POST {{registrationUrl}}/projects
+POST localhost:8083/projects
 Content-Type: application/json
 
-{"name": "Basket Weaving III", "accountId": ACCOUNT-ID}
+{"name": "Basket Weaving III", "accountId": 2}
 
 ### Get projects
-GET {{registrationUrl}}/projects?accountId=ACCOUNT-ID
+GET localhost:8083/projects?accountId=1
 
 ### Create allocation
-POST {{allocationsUrl}}/allocations
+POST localhost:8081/allocations
 Content-Type: application/json
 
-{"projectId": PROJECT-ID, "userId": USER-ID, "firstDay": "2015-05-17", "lastDay": "2015-05-18"}
+{"projectId": 11, "userId": 4, "firstDay": "2015-05-17", "lastDay": "2015-05-18"}
 
 ### Get allocations
-GET {{allocationsUrl}}/allocations?projectId=PROJECT-ID
+GET localhost:8081/allocations?projectId=11
 
 ### Create story
 POST {{backlogUrl}}/stories
