@@ -6,6 +6,7 @@ Content-Type: application/json
 
 ### Get user
 GET localhost:8083/users/4
+#Authorization: Bearer c571a7d3-529c-430e-a628-f85c763a4359
 
 ### Get account
 GET localhost:8083/accounts?ownerId=4
